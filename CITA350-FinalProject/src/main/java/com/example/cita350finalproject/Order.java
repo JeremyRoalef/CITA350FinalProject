@@ -23,6 +23,11 @@ public class Order
     public double getDiscount(){return discount;}
     public String getCustomerName(){return customerName;}
 
+    //create setters for attributes
+    public void setCustomerName(String newCustomerName){this.customerName = newCustomerName;}
+    public void setTaxRate(double newTaxRate){this.taxRate = newTaxRate;}
+    public void setDiscount(double newDiscount){this.discount = newDiscount;}
+    public void setQuantity(int newQuantity){this.quantity = newQuantity;}
 
     public String toString()
     {

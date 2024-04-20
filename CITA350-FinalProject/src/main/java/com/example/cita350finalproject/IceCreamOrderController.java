@@ -25,14 +25,18 @@ public class IceCreamOrderController {
 
     }
 
-    public void onCreateSandwichOrderClick(){
+    public void onCreateSandwichOrderClick() throws IOException {
         //go to sandwich order screen
-
+        Parent root = FXMLLoader.load(getClass().getResource("sandwich-order-view.fxml"));
+        Stage stage = (Stage) buttonSubmit.getScene().getWindow();
+        stage.setScene(new Scene(root, 600, 509));
     }
 
-    public void onReturnToMainScreenClick(){
+    public void onReturnToMainScreenClick() throws IOException {
         //go to main menu screen
-
+        Parent root = FXMLLoader.load(getClass().getResource("main-screen-view.fxml"));
+        Stage stage = (Stage) buttonSubmit.getScene().getWindow();
+        stage.setScene(new Scene(root, 600, 509));
     }
 
 }
