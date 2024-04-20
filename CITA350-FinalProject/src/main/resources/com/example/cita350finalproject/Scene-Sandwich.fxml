@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="sandwichPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalproject350v2.SandwichOrderController">
+   <children>
+      <Label layoutX="248.0" layoutY="15.0" text="Sandwich">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font></Label>
+      <TextField fx:id="nameInput" layoutX="103.0" layoutY="73.0" />
+      <TextField fx:id="quantityInput" layoutX="103.0" layoutY="113.0" />
+      <TextField fx:id="discountInput" layoutX="103.0" layoutY="153.0" />
+      <VBox layoutX="53.0" layoutY="309.0" prefHeight="54.0" prefWidth="100.0">
+         <children>
+            <RadioButton fx:id="typeOneRB" mnemonicParsing="false" text="Turkey">
+               <toggleGroup>
+                  <ToggleGroup fx:id="types" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="typeTwoRB" mnemonicParsing="false" text="Veggie" toggleGroup="$types" />
+            <RadioButton fx:id="typeThreeRB" mnemonicParsing="false" text="Ham" toggleGroup="$types" />
+         </children>
+      </VBox>
+      <VBox layoutX="53.0" layoutY="222.0" prefHeight="61.0" prefWidth="100.0">
+         <children>
+            <RadioButton fx:id="breadOneRB" mnemonicParsing="false" text="White">
+               <toggleGroup>
+                  <ToggleGroup fx:id="bread" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="breadTwoRB" mnemonicParsing="false" text="Wheat" toggleGroup="$bread" />
+            <RadioButton fx:id="breadThreeRB" mnemonicParsing="false" text="Rye" toggleGroup="$bread" />
+         </children>
+      </VBox>
+      <VBox layoutX="425.0" layoutY="79.0" prefHeight="281.0" prefWidth="150.0">
+         <children>
+            <Label fx:id="receiptResult" />
+         </children>
+      </VBox>
+      <Label layoutX="475.0" layoutY="52.0" text="Receipt">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="9.0" layoutY="77.0" text="Customer Name: " />
+      <Label layoutX="39.0" layoutY="116.0" prefHeight="18.0" prefWidth="56.0" text="Quantity: " />
+      <Label layoutX="39.0" layoutY="157.0" text="\$ Discount: " />
+      <Label layoutX="87.0" layoutY="292.0" text="Type" />
+      <Label layoutX="92.0" layoutY="200.0" text="Bread" textAlignment="CENTER" />
+      <Button fx:id="buttMenu" layoutX="15.0" layoutY="20.0" mnemonicParsing="false" onAction="#onMenuPressed" text="Main Menu" />
+      <Button fx:id="buttSandwich" layoutX="98.0" layoutY="20.0" mnemonicParsing="false" onAction="#onIceCream" text="Ice Cream Order" />
+      <Button fx:id="buttCalculate" layoutX="238.0" layoutY="238.0" mnemonicParsing="false" onAction="#onCalculate" prefHeight="92.0" prefWidth="123.0" text="Calculate ">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
