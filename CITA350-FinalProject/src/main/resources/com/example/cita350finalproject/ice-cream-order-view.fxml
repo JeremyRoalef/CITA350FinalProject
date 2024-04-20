@@ -4,9 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="509.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.cita350finalproject.IceCreamOrderController">
+<AnchorPane prefHeight="509.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cita350finalproject.IceCreamOrderController">
    <children>
       <Button fx:id="buttonCreateSandwichOrder" layoutX="340.0" layoutY="14.0" mnemonicParsing="false" onAction="#onCreateSandwichOrderClick" prefHeight="44.0" prefWidth="114.0" text="Create Sandwich Order" textAlignment="CENTER" wrapText="true">
          <font>
@@ -128,7 +126,7 @@
                </font></Label>
             <Label fx:id="labelReceipt" alignment="TOP_LEFT" layoutX="14.0" layoutY="58.0" prefHeight="338.0" prefWidth="176.0" wrapText="true">
                <font>
-                  <Font name="Comic Sans MS" size="16.0" />
+                  <Font name="Comic Sans MS" size="13.0" />
                </font>
             </Label>
          </children>

@@ -3,13 +3,16 @@ package com.example.cita350finalproject;
 public class IceCreamOrder extends Order
 {
     private String flavor;
-    private float flavorPrice;
+    private double flavorPrice;
     private String topping;
-    private float toppingPrice;
+    private double toppingPrice;
 
 
+    public IceCreamOrder(){
+        this("",0,0,"",0,"",0);
+    }
     public IceCreamOrder(String customerName, double discount, int quantity,
-                         String flavor, float flavorPrice, String topping, float toppingPrice)
+                         String flavor, double flavorPrice, String topping, double toppingPrice)
     {
         super(customerName, 0.07, discount, quantity);
         this.flavor = flavor;
@@ -18,23 +21,40 @@ public class IceCreamOrder extends Order
         this.toppingPrice = toppingPrice;
     }
 
+    //create getter methods for attributes
     public String getFlavor(){
         return flavor;
     }
-    public float getFlavorPrice(){
+    public double getFlavorPrice(){
         return flavorPrice;
     }
     public String getTopping(){
         return topping;
     }
-    public float getToppingPrice(){
+    public double getToppingPrice(){
         return toppingPrice;
     }
 
+    //create setter methods for attributes
+    public void setFlavor(String newFlavor){
+        this.flavor = newFlavor;}
+    public void setFlavorPrice(double newFlavorPrice){
+        this.flavorPrice = newFlavorPrice;
+    }
+    public void setTopping(String newTopping){
+        this.topping = newTopping;
+    }
+    public void setToppingPrice(double newToppingPrice){
+        this.toppingPrice = newToppingPrice;
+    }
+
+
     public String toString() {
         String str;
-        str = super.toString() + "Flavor: " + flavor + "\nFlavor Price: " + Float.toString(flavorPrice) + "\nTopping: " +
-        topping + "\nTopping Price: " + Float.toString(toppingPrice) + "\n";
+        str = super.toString() + "Flavor: " + flavor + "\nFlavor Price: " + Double.toString(flavorPrice) +
+                "\nTopping: " + topping + "\nTopping Price: " + Double.toString(toppingPrice) +
+                "\nSubtotal: " + Double.toString(calculateSubTotal()) + "\nTotal: " +
+                Double.toString(calculateTotal());
         return str;
     }
 
@@ -45,6 +65,7 @@ public class IceCreamOrder extends Order
 
     public double calculateTotal()
     {
-        return (calculateSubTotal() + (calculateSubTotal() * getTaxRate()) - (calculateSubTotal() * getDiscount()));
+        return (calculateSubTotal() + (calculateSubTotal() * getTaxRate()) -
+                (calculateSubTotal() * getDiscount()));
     }
 }
