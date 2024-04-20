@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="188.0" prefWidth="247.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cita350finalproject.ProjectController">
+<AnchorPane prefHeight="188.0" prefWidth="247.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cita350finalproject.LoginController">
    <children>
       <Button fx:id="buttonSignIn" layoutX="176.0" layoutY="146.0" mnemonicParsing="false" onAction="#onButtonSignInClick" text="Sign In" />
       <Label layoutX="98.0" layoutY="14.0" text="Welcome" />
