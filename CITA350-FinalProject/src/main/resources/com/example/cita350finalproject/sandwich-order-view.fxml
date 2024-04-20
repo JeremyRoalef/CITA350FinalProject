@@ -4,17 +4,17 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cita350finalproject.LoginController">
+<AnchorPane prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cita350finalproject.SandwichOrderController">
    <children>
       <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="57.0" prefWidth="319.0" text="Sandwich Order" textAlignment="CENTER">
          <font>
             <Font name="Comic Sans MS Bold" size="30.0" />
          </font></Label>
-      <Button alignment="CENTER" layoutX="347.0" layoutY="21.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="114.0" text="Create Ice Cream Order" textAlignment="CENTER" wrapText="true">
+      <Button fx:id="buttonCreateIceCreamOrder" alignment="CENTER" layoutX="347.0" layoutY="21.0" mnemonicParsing="false" onAction="#onCreateIceCreamOrderClick" prefHeight="44.0" prefWidth="114.0" text="Create Ice Cream Order" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Comic Sans MS Italic" size="12.0" />
          </font></Button>
-      <Button alignment="CENTER" layoutX="474.0" layoutY="21.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="114.0" text="Return to Main Screen" textAlignment="CENTER" wrapText="true">
+      <Button fx:id="buttonReturnToMainScreen" alignment="CENTER" layoutX="474.0" layoutY="21.0" mnemonicParsing="false" onAction="#onReturnToMainScreenClick" prefHeight="44.0" prefWidth="114.0" text="Return to Main Screen" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Comic Sans MS Italic" size="12.0" />
          </font></Button>
@@ -40,58 +40,58 @@
                <font>
                   <Font name="Comic Sans MS Bold" size="12.0" />
                </font></Label>
-            <Button layoutX="277.0" layoutY="298.0" mnemonicParsing="false" text="Submit">
+            <Button fx:id="buttonSubmit" layoutX="277.0" layoutY="298.0" mnemonicParsing="false" onAction="#onSubmitClick" text="Submit">
                <font>
                   <Font name="Comic Sans MS Italic" size="12.0" />
                </font></Button>
-            <TextField layoutX="85.0" layoutY="14.0" prefHeight="25.0" prefWidth="241.0" />
-            <TextField layoutX="85.0" layoutY="45.0" prefHeight="25.0" prefWidth="241.0" />
-            <TextField layoutX="85.0" layoutY="78.0" prefHeight="25.0" prefWidth="241.0" />
-            <RadioButton layoutX="28.0" layoutY="135.0" mnemonicParsing="false" text="RadioButton">
+            <TextField fx:id="textFieldName" layoutX="85.0" layoutY="14.0" prefHeight="25.0" prefWidth="241.0" />
+            <TextField fx:id="textFieldQuantity" layoutX="85.0" layoutY="45.0" prefHeight="25.0" prefWidth="241.0" />
+            <TextField fx:id="textFieldDiscount" layoutX="85.0" layoutY="78.0" prefHeight="25.0" prefWidth="241.0" />
+            <RadioButton fx:id="radioButtonWheat" layoutX="28.0" layoutY="135.0" mnemonicParsing="false" text="Wheat">
                <font>
                   <Font name="Comic Sans MS" size="12.0" />
                </font></RadioButton>
-            <RadioButton layoutX="28.0" layoutY="160.0" mnemonicParsing="false" text="RadioButton">
+            <RadioButton fx:id="radioButtonWhite" layoutX="28.0" layoutY="160.0" mnemonicParsing="false" text="White">
                <font>
                   <Font name="Comic Sans MS" size="12.0" />
                </font></RadioButton>
-            <RadioButton layoutX="28.0" layoutY="181.0" mnemonicParsing="false" text="RadioButton">
+            <RadioButton fx:id="radioButtonSourdough" layoutX="28.0" layoutY="181.0" mnemonicParsing="false" text="Sourdough">
                <font>
                   <Font name="Comic Sans MS" size="12.0" />
                </font></RadioButton>
-            <RadioButton layoutX="216.0" layoutY="137.0" mnemonicParsing="false" text="RadioButton">
+            <RadioButton fx:id="radioButtonRye" layoutX="216.0" layoutY="137.0" mnemonicParsing="false" text="Rye">
                <font>
                   <Font name="Comic Sans MS" size="12.0" />
                </font></RadioButton>
-            <RadioButton layoutX="216.0" layoutY="160.0" mnemonicParsing="false" text="RadioButton">
+            <RadioButton fx:id="radioButtonMultigrain" layoutX="216.0" layoutY="160.0" mnemonicParsing="false" text="Multigrain">
                <font>
                   <Font name="Comic Sans MS" size="12.0" />
                </font></RadioButton>
-            <RadioButton layoutX="216.0" layoutY="183.0" mnemonicParsing="false" text="RadioButton">
+            <RadioButton fx:id="radioButtonItalian" layoutX="216.0" layoutY="183.0" mnemonicParsing="false" text="Italian">
                <font>
                   <Font name="Comic Sans MS" size="12.0" />
                </font></RadioButton>
-            <CheckBox layoutX="28.0" layoutY="221.0" mnemonicParsing="false" text="CheckBox">
+            <CheckBox fx:id="checkBoxHam" layoutX="28.0" layoutY="221.0" mnemonicParsing="false" text="Ham">
                <font>
                   <Font name="Comic Sans MS" size="12.0" />
                </font></CheckBox>
-            <CheckBox layoutX="216.0" layoutY="220.0" mnemonicParsing="false" text="CheckBox">
+            <CheckBox fx:id="checkBoxTuna" layoutX="216.0" layoutY="220.0" mnemonicParsing="false" text="Tuna">
                <font>
                   <Font name="Comic Sans MS" size="12.0" />
                </font></CheckBox>
-            <CheckBox layoutX="28.0" layoutY="245.0" mnemonicParsing="false" text="CheckBox">
+            <CheckBox fx:id="checkBoxTurkey" layoutX="28.0" layoutY="245.0" mnemonicParsing="false" text="Turkey">
                <font>
                   <Font name="Comic Sans MS" size="12.0" />
                </font></CheckBox>
-            <CheckBox layoutX="28.0" layoutY="270.0" mnemonicParsing="false" text="CheckBox">
+            <CheckBox fx:id="checkBoxChicken" layoutX="28.0" layoutY="270.0" mnemonicParsing="false" text="Chicken">
                <font>
                   <Font name="Comic Sans MS" size="12.0" />
                </font></CheckBox>
-            <CheckBox layoutX="216.0" layoutY="244.0" mnemonicParsing="false" text="CheckBox">
+            <CheckBox fx:id="checkBoxBacon" layoutX="216.0" layoutY="244.0" mnemonicParsing="false" text="Bacon">
                <font>
                   <Font name="Comic Sans MS" size="12.0" />
                </font></CheckBox>
-            <CheckBox layoutX="216.0" layoutY="269.0" mnemonicParsing="false" text="CheckBox">
+            <CheckBox fx:id="checkBoxRoastBeef" layoutX="216.0" layoutY="269.0" mnemonicParsing="false" text="Roast Beef">
                <font>
                   <Font name="Comic Sans MS" size="12.0" />
                </font></CheckBox>
@@ -103,7 +103,7 @@
                <font>
                   <Font name="Comic Sans MS Bold" size="14.0" />
                </font></Label>
-            <Label alignment="TOP_LEFT" layoutX="4.0" layoutY="43.0" prefHeight="292.0" prefWidth="231.0" text="Label">
+            <Label fx:id="labelReceipt" alignment="TOP_LEFT" layoutX="4.0" layoutY="43.0" prefHeight="292.0" prefWidth="231.0">
                <font>
                   <Font name="Comic Sans MS" size="16.0" />
                </font></Label>

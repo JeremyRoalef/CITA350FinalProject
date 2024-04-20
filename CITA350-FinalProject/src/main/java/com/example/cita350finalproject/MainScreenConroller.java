@@ -23,6 +23,6 @@ public class MainScreenConroller {
         //change scene view to main-screen-view.fxml
         Parent root = FXMLLoader.load(getClass().getResource("sandwich-order-view.fxml"));
         Stage stage = (Stage) buttonSandwichOrder.getScene().getWindow();
-        stage.setScene(new Scene(root, 320, 100));
+        stage.setScene(new Scene(root, 600, 300));
     }
 }
