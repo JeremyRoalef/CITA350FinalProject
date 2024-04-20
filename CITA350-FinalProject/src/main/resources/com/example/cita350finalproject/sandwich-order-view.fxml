@@ -2,10 +2,112 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cita350finalproject.ProjectController">
+<AnchorPane prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cita350finalproject.ProjectController">
    <children>
-      <Label layoutX="14.0" layoutY="14.0" prefHeight="205.0" prefWidth="282.0" text="SANDWICH ORDEWR STUFF HERE" />
+      <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="57.0" prefWidth="319.0" text="Sandwich Order" textAlignment="CENTER">
+         <font>
+            <Font name="Comic Sans MS Bold" size="30.0" />
+         </font></Label>
+      <Button alignment="CENTER" layoutX="347.0" layoutY="21.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="114.0" text="Create Ice Cream Order" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Comic Sans MS Italic" size="12.0" />
+         </font></Button>
+      <Button alignment="CENTER" layoutX="474.0" layoutY="21.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="114.0" text="Return to Main Screen" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Comic Sans MS Italic" size="12.0" />
+         </font></Button>
+      <AnchorPane layoutX="14.0" layoutY="71.0" prefHeight="339.0" prefWidth="348.0">
+         <children>
+            <Label layoutX="39.0" layoutY="18.0" text="Name">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="32.0" layoutY="49.0" text="Quantity">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="17.0" layoutY="82.0" text="\% Discount">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="113.0" layoutY="109.0" text="Bread Type">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="113.0" layoutY="196.0" text="Meat/Protein">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="12.0" />
+               </font></Label>
+            <Button layoutX="277.0" layoutY="298.0" mnemonicParsing="false" text="Submit">
+               <font>
+                  <Font name="Comic Sans MS Italic" size="12.0" />
+               </font></Button>
+            <TextField layoutX="85.0" layoutY="14.0" prefHeight="25.0" prefWidth="241.0" />
+            <TextField layoutX="85.0" layoutY="45.0" prefHeight="25.0" prefWidth="241.0" />
+            <TextField layoutX="85.0" layoutY="78.0" prefHeight="25.0" prefWidth="241.0" />
+            <RadioButton layoutX="28.0" layoutY="135.0" mnemonicParsing="false" text="RadioButton">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></RadioButton>
+            <RadioButton layoutX="28.0" layoutY="160.0" mnemonicParsing="false" text="RadioButton">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></RadioButton>
+            <RadioButton layoutX="28.0" layoutY="181.0" mnemonicParsing="false" text="RadioButton">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></RadioButton>
+            <RadioButton layoutX="216.0" layoutY="137.0" mnemonicParsing="false" text="RadioButton">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></RadioButton>
+            <RadioButton layoutX="216.0" layoutY="160.0" mnemonicParsing="false" text="RadioButton">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></RadioButton>
+            <RadioButton layoutX="216.0" layoutY="183.0" mnemonicParsing="false" text="RadioButton">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></RadioButton>
+            <CheckBox layoutX="28.0" layoutY="221.0" mnemonicParsing="false" text="CheckBox">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></CheckBox>
+            <CheckBox layoutX="216.0" layoutY="220.0" mnemonicParsing="false" text="CheckBox">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></CheckBox>
+            <CheckBox layoutX="28.0" layoutY="245.0" mnemonicParsing="false" text="CheckBox">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></CheckBox>
+            <CheckBox layoutX="28.0" layoutY="270.0" mnemonicParsing="false" text="CheckBox">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></CheckBox>
+            <CheckBox layoutX="216.0" layoutY="244.0" mnemonicParsing="false" text="CheckBox">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></CheckBox>
+            <CheckBox layoutX="216.0" layoutY="269.0" mnemonicParsing="false" text="CheckBox">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></CheckBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="353.0" layoutY="71.0" prefHeight="339.0" prefWidth="241.0">
+         <children>
+            <Label layoutX="95.0" layoutY="14.0" text="Receipt">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="14.0" />
+               </font></Label>
+            <Label alignment="TOP_LEFT" layoutX="4.0" layoutY="43.0" prefHeight="292.0" prefWidth="231.0" text="Label">
+               <font>
+                  <Font name="Comic Sans MS" size="16.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
