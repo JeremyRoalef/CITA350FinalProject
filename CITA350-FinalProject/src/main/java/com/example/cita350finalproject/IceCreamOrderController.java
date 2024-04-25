@@ -7,15 +7,31 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 public class IceCreamOrderController {
 
     //add controls from ice cream order window
-    public Button buttonSubmit, buttonCreateSandwichOrder, buttonReturnToMainScreen;
-    public TextField textFieldName, textFieldQuantity, textFieldDiscount;
-    public RadioButton radioButtonChocolate, radioButtonStrawberry, radioButtonVanilla,
-        radioButtonRaspberry, radioButtonCottonCandy, radioButtonMint;
-    public CheckBox checkBoxChocolateSprinkles, checkBoxRainbowSprinkles, checkBoxChocolateFudge,
-        checkBoxBrownieBits, checkBoxMeltedMarshmallows, checkBoxCookieDough;
+    public Button buttonSubmit,
+            buttonCreateSandwichOrder,
+            buttonReturnToMainScreen;
+    public TextField textFieldName,
+            textFieldQuantity,
+            textFieldDiscount;
+    public RadioButton radioButtonChocolate,
+            radioButtonStrawberry,
+            radioButtonVanilla,
+            radioButtonRaspberry,
+            radioButtonCottonCandy,
+            radioButtonMint;
+    public CheckBox checkBoxChocolateSprinkles,
+            checkBoxRainbowSprinkles,
+            checkBoxChocolateFudge,
+            checkBoxBrownieBits,
+            checkBoxMeltedMarshmallows,
+            checkBoxCookieDough;
     public Label labelReceipt;
 
     //create ice cream order obeject
@@ -36,6 +52,8 @@ public class IceCreamOrderController {
     double priceOfMeltedMarshmallows = 0.79;
     double priceOfCookieDough = 0.99;
 
+    //create connection object
+    Connection conn = null;
 
     //create methods to add functionality to screen
     public void onSubmitClick() {
@@ -112,6 +130,9 @@ public class IceCreamOrderController {
         //print results of the order to the receipt.
         labelReceipt.setText(iceCreamOrder.toString());
 
+        //add order to database
+        addToDataBase();
+
     }
 
     public void onCreateSandwichOrderClick() throws IOException {
@@ -128,4 +149,30 @@ public class IceCreamOrderController {
         stage.setScene(new Scene(root, 600, 509));
     }
 
+    public void addToDataBase(){
+        try{
+            //1. initialize connection
+            initialize();
+
+            //2. create string query
+            String INSERT_QUERY = "INSERT INTO ICECREAMORDER (CUSTOMERNAME, FLAVOR, TOPPING, SUBTOTAL, QUANTITY," +
+                    "TAX, DISCOUNT, TOTAL) VALUES('" + iceCreamOrder.getCustomerName() + "','" + iceCreamOrder.getFlavor()
+                    + "','" + iceCreamOrder.getTopping() + "'," + iceCreamOrder.calculateSubTotal() + "," +
+                    iceCreamOrder.getQuantity() + "," + iceCreamOrder.getTaxRate() + "," + iceCreamOrder.getDiscount() +
+                    "," + iceCreamOrder.calculateTotal() + ")";
+
+            //3. create statement object from conn
+            Statement statement = conn.createStatement();
+
+            //4. execute statement w/ query argument
+            statement.executeUpdate(INSERT_QUERY);
+        }
+        catch (SQLException sqlException){
+            sqlException.printStackTrace();
+        }
+    }
+
+    public void initialize(){
+        conn = DatabaseConnection.createConnection();
+    }
 }

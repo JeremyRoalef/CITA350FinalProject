@@ -3,10 +3,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="100.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cita350finalproject.MainScreenConroller">
+<AnchorPane prefHeight="100.0" prefWidth="495.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cita350finalproject.MainScreenConroller">
    <children>
       <Button fx:id="buttonIceCreamOrder" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onButtonIceCreamOrderClick" prefHeight="63.0" prefWidth="124.0" text="Ice Cream Order" />
       <Button fx:id="buttonSandwichOrder" layoutX="182.0" layoutY="14.0" mnemonicParsing="false" onAction="#onButtonSandwichOrderClick" prefHeight="63.0" prefWidth="124.0" text="Sandwich Order" />
+      <Button fx:id="buttonReports" layoutX="357.0" layoutY="14.0" mnemonicParsing="false" onAction="#onButtonReportsClick" prefHeight="63.0" prefWidth="124.0" text="Reports" />
    </children>
 </AnchorPane>

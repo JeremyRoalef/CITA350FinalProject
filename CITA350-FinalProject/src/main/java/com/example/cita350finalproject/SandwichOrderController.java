@@ -7,6 +7,10 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 public class SandwichOrderController {
 
     //add controls from sandwich order window
@@ -35,6 +39,9 @@ public class SandwichOrderController {
     double priceOfRoastBeef = 4.59;
     double priceOfChicken = 3.29;
     double priceOfBacon = 2.19;
+
+    //create connection object
+    Connection conn = null;
 
     //create methods to add functionality to screen
     public void onSubmitClick() {
@@ -110,6 +117,9 @@ public class SandwichOrderController {
 
         //print results of the order to the receipt.
         labelReceipt.setText(sandwichOrder.toString());
+
+        //add object to database
+        addToDataBase();
     }
 
     public void onCreateIceCreamOrderClick() throws IOException {
@@ -124,5 +134,32 @@ public class SandwichOrderController {
         Parent root = FXMLLoader.load(getClass().getResource("main-screen-view.fxml"));
         Stage stage = (Stage) buttonSubmit.getScene().getWindow();
         stage.setScene(new Scene(root, 600, 509));
+    }
+
+    public void addToDataBase(){
+        try{
+            //1. initialize connection
+            initialize();
+
+            //2. create string query
+            String INSERT_QUERY = "INSERT INTO SANDWICHORDER (CUSTOMERNAME, BREADTYPE, PROTEIN, SUBTOTAL, QUANTITY," +
+                    "TAX, DISCOUNT, TOTAL) VALUES('" + sandwichOrder.getCustomerName() + "','" + sandwichOrder.getBreadType()
+                    + "','" + sandwichOrder.getSandwichProtein() + "'," + sandwichOrder.calculateSubTotal() + "," +
+                    sandwichOrder.getQuantity() + "," + sandwichOrder.getTaxRate() + "," + sandwichOrder.getDiscount() +
+                    "," + sandwichOrder.calculateTotal() + ")";
+
+            //3. create statement object from conn
+            Statement statement = conn.createStatement();
+
+            //4. execute statement w/ query argument
+            statement.executeUpdate(INSERT_QUERY);
+        }
+        catch (SQLException sqlException){
+            sqlException.printStackTrace();
+        }
+    }
+
+    public void initialize(){
+        conn = DatabaseConnection.createConnection();
     }
 }

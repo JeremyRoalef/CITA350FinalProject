@@ -25,4 +25,10 @@ public class MainScreenConroller {
         Stage stage = (Stage) buttonSandwichOrder.getScene().getWindow();
         stage.setScene(new Scene(root, 600, 300));
     }
+    public void onButtonReportsClick() throws IOException {
+        //change scene view to main-screen-view.fxml
+        Parent root = FXMLLoader.load(getClass().getResource("reports-view.fxml"));
+        Stage stage = (Stage) buttonSandwichOrder.getScene().getWindow();
+        stage.setScene(new Scene(root, 600, 300));
+    }
 }

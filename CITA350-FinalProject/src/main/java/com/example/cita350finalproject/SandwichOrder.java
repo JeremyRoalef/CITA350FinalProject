@@ -25,14 +25,29 @@ public class SandwichOrder extends Order
 
     }
 
+    public String getBreadType(){
+        return this.breadType;
+    }
+    public double getBreadTypePrice(){
+        return this.breadTypePrice;
+    }
+    public String getSandwichProtein(){
+        return this.sandwichProtein;
+    }
+    public double getSandwichProteinPrice(){
+        return this.sandwichProteinPrice;
+    }
+
+
+
     public void setBreadType(String newBreadType){
         this.breadType = newBreadType;}
     public void setBreadTypePrice(double newBreadTypePrice){
         this.breadTypePrice = newBreadTypePrice;}
     public void setSandwichProtein(String newSandwichProtein){
         this.sandwichProtein = newSandwichProtein;}
-    public void setSandwichProteinPrice(double newSandwichProteinPrice)
-        {this.sandwichProteinPrice = newSandwichProteinPrice;}
+    public void setSandwichProteinPrice(double newSandwichProteinPrice) {
+        this.sandwichProteinPrice = newSandwichProteinPrice;}
 
     public String toString()
     {
